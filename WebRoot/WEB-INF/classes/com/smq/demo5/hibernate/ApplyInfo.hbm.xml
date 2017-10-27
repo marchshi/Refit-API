@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.smq.demo5.bean">
+	
+	<class name="ApplyInfoBean" table="apply_info" >
+		<id name="applyId" column="apply_id" >
+			<generator class="native"></generator>
+		</id>
+		<property name="askId" column="ask_id"></property>
+		<property name="catId" column="cat_id"></property>
+		<property name="applyDate" column="apply_date"></property>
+		<property name="status" column="status" ></property>
+		<property name="lookDate" column="look_date" ></property>
+		<property name="payDate" column="pay_date"></property>
+		<many-to-one name="ask" column="ask_id" class="AskInfoBean" insert="false" update="false"></many-to-one>
+		<many-to-one name="cat" column="cat_id" class="CatInfoBean"  insert="false" update="false"></many-to-one>
+	</class>
+</hibernate-mapping>

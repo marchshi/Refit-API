@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.smq.demo5.bean">
+	
+	<class name="CatNameBean" table="cat_name">
+		<id name="nameId" column="name_id">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="childName" column="child_name"></property>
+		<property name="parentName" column="parent_name"></property>
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.smq.demo5.bean">
+	
+	<class name="LoginHisBean" table="login_his">
+		<id name="loginId" column="login_id">
+			<generator class="native"></generator>
+		</id>
+		<property name="userId" column="user_id"></property>
+		<property name="tel" column="tel"></property>
+		<property name="uuid" column="uuid"></property>
+		<property name="loginDate" column="login_date"></property>
+		<property name="loginer" column="loginer"></property>
+	</class>
+
+</hibernate-mapping>

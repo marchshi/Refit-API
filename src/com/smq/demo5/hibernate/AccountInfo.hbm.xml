@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.smq.demo5.bean">
+	
+	<class name="AccountInfoBean" table="account_info">
+		<id name="accountId" column="account_id">
+			<generator class="foreign">
+				<param name="property">user</param>
+			</generator>
+		</id>
+		<property name="balance" column="balance"></property>
+		<property name="expense" column="expense"></property>
+		<property name="asset" column="asset"></property>
+		<one-to-one name="user" class="UserInfoBean" ></one-to-one>
+	</class>
+</hibernate-mapping>

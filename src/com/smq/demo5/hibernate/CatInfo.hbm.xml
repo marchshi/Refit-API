@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.smq.demo5.bean">
+	
+	<class name="CatInfoBean" table="cat_info">
+		<id name="catId" column="cat_id">
+			<generator class="native"></generator>
+		</id>
+		<property name="userId" column="user_id"></property>
+		<property name="nameId" column="name_id"></property>
+		<property name="label" column="label"></property>
+		<property name="catDesc" column="cat_desc"></property>
+		<property name="price" column="price"></property>
+		<property name="cont" column="cont"></property>
+		<property name="serverModel" column="server_model"></property>
+		<property name="scheTime" column="sche_time"></property>
+		<property name="lookTimes" column="look_times"></property>
+		<property name="newLook" column="new_look"></property>
+		<property name="form" column="form"></property>
+		
+		<many-to-one name="catName" column="name_id" class="CatNameBean" insert="false" update="false"></many-to-one>
+		<many-to-one name="user" column="user_id" class="UserInfoBean" insert="false" update="false"></many-to-one>
+		<set name="orders" table="order_info" order-by="switch1 desc">
+			<key column="cat_id"></key>
+			<one-to-many class="OrderInfoBean"/>
+		</set>
+	</class>
+
+</hibernate-mapping>

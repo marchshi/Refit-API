@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.smq.demo5.bean">
+	
+	<class name="AccountCompanyBean" table="account_company">
+		<id name="recordId" column="record_id">
+			<generator class="native"></generator>
+		</id>
+		<property name="balance" column="balance"></property>
+		<property name="liability" column="liability"></property>
+		<property name="income" column="income"></property>
+		<property name="expense" column="expense"></property>
+		<property name="asset" column="asset"></property>
+		<property name="recordDate" column="record_date"></property>
+		<property name="status" column="status"></property>
+		<property name="money" column="money"></property>
+		<property name="aboutId" column="about_id"></property>
+	</class>
+</hibernate-mapping>

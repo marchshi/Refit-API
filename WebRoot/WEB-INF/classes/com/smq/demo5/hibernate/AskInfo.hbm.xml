@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.smq.demo5.bean">
+	
+	<class name="AskInfoBean" table="ask_info" >
+		<id name="askId" column="ask_id" >
+			<generator class="native"></generator>
+		</id>
+		<property name="userId" column="user_id"></property>
+		<property name="content" column="content"></property>
+		<property name="refPrice" column="ref_price"></property>
+		<property name="askDate" column="ask_date" ></property>
+		<property name="nameId" column="name_id" ></property>
+		<property name="anonymity" column="anonymity"></property>
+		<property name="opening" column="opening"></property>
+		<property name="lookTimes" column="look_times"></property>
+		<many-to-one name="catName" column="name_id" class="CatNameBean" insert="false" update="false"></many-to-one>
+		<many-to-one name="user" column="user_id" class="UserInfoBean"  insert="false" update="false"></many-to-one>
+		<set name="applys" table="apply_info" order-by="apply_date desc" inverse="true">
+			<key column="ask_id"></key>
+			<one-to-many class="ApplyInfoBean"/>
+		</set>
+	</class>
+</hibernate-mapping>

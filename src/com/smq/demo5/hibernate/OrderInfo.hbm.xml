@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.smq.demo5.bean">
+	
+	<class name="OrderInfoBean" table="order_info" >
+		<id name="orderId" column="order_id" >
+			<generator class="native"></generator>
+		</id>
+		<property name="payUserId" column="pay_user_id"></property>
+		<property name="catId" column="cat_id"></property>
+		<property name="nameId" column="name_id"></property>
+		<property name="price" column="price" ></property>
+		<property name="cont" column="cont" ></property>
+		<property name="serverModel" column="server_model"></property>
+		<property name="scheTime" column="sche_time"></property>
+		<property name="otderFrom" column="order_from"></property>
+		<property name="status" column="status"></property>
+		<property name="switch1" column="switch1"></property>
+		<property name="switch2" column="switch2"></property>
+		<property name="switch3" column="switch3"></property>
+		<property name="switch4" column="switch4"></property>
+		<property name="switch5" column="switch5"></property>
+		<property name="switch6" column="switch6"></property>
+		<property name="form" column="form"></property>
+		
+		<many-to-one name="catName" column="name_id" class="CatNameBean" insert="false" update="false"></many-to-one>
+		<many-to-one name="user" column="pay_user_id" class="UserInfoBean"  insert="false" update="false"></many-to-one>
+		<many-to-one name="cat" column="cat_id" class="CatInfoBean"  insert="false" update="false"></many-to-one>
+	</class>
+</hibernate-mapping>
