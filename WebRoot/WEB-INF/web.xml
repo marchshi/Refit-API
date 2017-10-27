@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <servlet>
+    <servlet-name>Verify</servlet-name>
+    <servlet-class>com.smq.mode2.servlet.Verify</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Verify</servlet-name>
+    <url-pattern>/verify</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>com.smq.mode2.servlet.Login</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Info</servlet-name>
+    <servlet-class>com.smq.mode2.servlet.Info</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EditCat</servlet-name>
+    <servlet-class>com.smq.mode2.servlet.EditCat</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SaveForm</servlet-name>
+    <servlet-class>com.smq.mode2.servlet.SaveForm</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Ask</servlet-name>
+    <servlet-class>com.smq.mode2.servlet.Ask</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Apply</servlet-name>
+    <servlet-class>com.smq.mode2.servlet.Apply</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Search</servlet-name>
+    <servlet-class>com.smq.mode2.servlet.Search</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CatTable</servlet-name>
+    <servlet-class>com.smq.mode2.servlet.CatTable</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>Info</servlet-name>
+    <url-pattern>/info</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EditCat</servlet-name>
+    <url-pattern>/editCat</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SaveForm</servlet-name>
+    <url-pattern>/saveForm</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Ask</servlet-name>
+    <url-pattern>/ask</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Apply</servlet-name>
+    <url-pattern>/apply</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Search</servlet-name>
+    <url-pattern>/search</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CatTable</servlet-name>
+    <url-pattern>/catTable</url-pattern>
+  </servlet-mapping>
+
+
+</web-app>
